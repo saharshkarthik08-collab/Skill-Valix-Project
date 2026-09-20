@@ -12,7 +12,9 @@
 The modern B2B marketing pipeline is beset by inefficiencies; uncurated, inconsistent domain data in candidate prospect pools. This project develops a modular, service-based platform to automate lead discovery, domain entity de-duplication, contact information enrichment, and multi-criteria algorithmic scoring. Ingests higher-level Natural Language Ideal Customer Profiles (ICPs), produces structured target parameters (industry taxonomy, valuation proxies, geography, stakeholder roles), and works through a parallel pipeline architecture, taking raw candidate entities through domain de-duplication routines, heuristic contact enrichment tools, and a multi-attribute decision analysis (MADA) scoring model to generate empirical match grades and justifications that can be exposed as RESTful API calls or exported in structured metadata formats (JSON, CSV).
 
 ---
+## 2. Project Description
 
+the project is building a modular, service-oriented platform to solve a tough problem in modern B2B marketing: handling loosely organised, inconsistent lead prospect data. This product probably is a solution to the pain by making manual effort on sales team side redundant - it suggests using natural language ICPs, to automatically derive target parameters like Industry, Company size proxy, Target Locations, Target Titles. Once supplied with raw lead data, new leads go through the ETL pipeline, which is presented as seemingly removing duplicate company domains, enriches short contact info, and goes through a Multi-Attribute Decision Analysis (MADA) algorithm on each lead resulting in a match score with written explanation, and the user can access it through REST API endpoints or push the data into simple structured JSON or CSV files.
 
 
 ---
@@ -28,28 +30,23 @@ The modern B2B marketing pipeline is beset by inefficiencies; uncurated, inconsi
 
 ### 1.Create and activate a virtual environment:
 
-Bash
 * **python** -m venv venv
-On Windows:
+### On Windows:
 
-DOS
 venv\Scripts\activate
-On macOS / Linux:
+### On macOS / Linux:
 
-Bash
 source venv/bin/activate
-Install required dependencies:
-
-Bash
-pip install fastapi uvicorn pydantic
-4. Execution & Server Deployment
+### Install required dependencies:
+ pip install fastapi uvicorn pydantic
+### 4. Execution & Server Deployment
 To instantiate the application backend locally via Uvicorn ASGI server:
 
-Bash
 python main.py
+
 Upon initialization, the ASGI instance will bind to http://0.0.0.0:8000.
 
-5. API Reference & Interface Documentation
+5. ### API Reference & Interface Documentation
 OpenAPI Specification (Swagger UI)
 The interactive HTTP documentation and schema definitions are served at:
 
